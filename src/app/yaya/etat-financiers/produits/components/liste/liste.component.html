@@ -1,0 +1,222 @@
+<div class="container-fluid py-3">
+  <div class="list">
+    <mat-list role="list">
+      <div mat-subheader>2022</div>
+      <div #janvier>
+        <mat-list-item
+          [ngClass]="{ listItemActivated: isActivatedItem(janvier) }"
+          role="button"
+          (click)="onClickListItem(janvier)"
+        >
+          <mat-icon
+            matListItemIcon
+            [ngClass]="{ iconListItemActivated: !isActivatedItem(janvier) }"
+            >keyboard_arrow_down</mat-icon
+          >
+          <Span>Janvier</Span>
+        </mat-list-item>
+        <div *ngIf="isActivatedItem(janvier)">
+          <app-table [mouvements]="produitsJanvier"></app-table>
+        </div>
+      </div>
+      <div #fevrier>
+        <mat-list-item
+          role="button"
+          [ngClass]="{ listItemActivated: isActivatedItem(fevrier) }"
+          (click)="onClickListItem(fevrier)"
+        >
+          <mat-icon
+            matListItemIcon
+            [ngClass]="{ iconListItemActivated: !isActivatedItem(fevrier) }"
+            class="text-end"
+            >keyboard_arrow_down</mat-icon
+          >
+          <span>Février</span>
+        </mat-list-item>
+        <div *ngIf="isActivatedItem(fevrier)">
+          <app-table [mouvements]="produitsFevrier"></app-table>
+        </div>
+      </div>
+      <div #mars>
+        <mat-list-item
+          role="button"
+          [ngClass]="{ listItemActivated: isActivatedItem(mars) }"
+          (click)="onClickListItem(mars)"
+        >
+          <mat-icon
+            matListItemIcon
+            [ngClass]="{ iconListItemActivated: !isActivatedItem(mars) }"
+            class="text-end"
+            >keyboard_arrow_down</mat-icon
+          >
+          <span>Mars</span>
+        </mat-list-item>
+        <div *ngIf="isActivatedItem(mars)">
+          <app-table [mouvements]="produitsMars"></app-table>
+        </div>
+      </div>
+      <div #avril>
+        <mat-list-item
+          role="button"
+          [ngClass]="{ listItemActivated: isActivatedItem(avril) }"
+          (click)="onClickListItem(avril)"
+        >
+          <mat-icon
+            matListItemIcon
+            [ngClass]="{ iconListItemActivated: !isActivatedItem(avril) }"
+            class="text-end"
+            >keyboard_arrow_down</mat-icon
+          >
+          <span>Avril</span>
+        </mat-list-item>
+        <div *ngIf="isActivatedItem(avril)">
+          <app-table [mouvements]="produitsAvril"></app-table>
+        </div>
+      </div>
+      <div #mai>
+        <mat-list-item
+          role="button"
+          [ngClass]="{ listItemActivated: isActivatedItem(mai) }"
+          (click)="onClickListItem(mai)"
+        >
+          <mat-icon
+            matListItemIcon
+            [ngClass]="{ iconListItemActivated: !isActivatedItem(mai) }"
+            class="text-end"
+            >keyboard_arrow_down</mat-icon
+          >
+          <span>Mai</span>
+        </mat-list-item>
+        <div *ngIf="isActivatedItem(mai)">
+          <app-table [mouvements]="produitsMai"></app-table>
+        </div>
+      </div>
+      <div #juin>
+        <mat-list-item
+          role="button"
+          [ngClass]="{ listItemActivated: isActivatedItem(juin) }"
+          (click)="onClickListItem(juin)"
+        >
+          <mat-icon
+            matListItemIcon
+            [ngClass]="{ iconListItemActivated: !isActivatedItem(juin) }"
+            class="text-end"
+            >keyboard_arrow_down</mat-icon
+          >
+          <span>Juin</span>
+        </mat-list-item>
+        <div *ngIf="isActivatedItem(juin)">
+          <app-table [mouvements]="produitsJuin"></app-table>
+        </div>
+      </div>
+      <div #juillet>
+        <mat-list-item
+          role="button"
+          [ngClass]="{ listItemActivated: isActivatedItem(juillet) }"
+          (click)="onClickListItem(juillet)"
+        >
+          <mat-icon
+            matListItemIcon
+            [ngClass]="{ iconListItemActivated: !isActivatedItem(juillet) }"
+            class="text-end"
+            >keyboard_arrow_down</mat-icon
+          >
+          <span>Juillet</span>
+        </mat-list-item>
+        <div *ngIf="isActivatedItem(juillet)">
+          <app-table [mouvements]="produitsJuillet"></app-table>
+        </div>
+      </div>
+      <div #aout>
+        <mat-list-item
+          role="button"
+          [ngClass]="{ listItemActivated: isActivatedItem(aout) }"
+          (click)="onClickListItem(aout)"
+        >
+          <mat-icon
+            matListItemIcon
+            [ngClass]="{ iconListItemActivated: !isActivatedItem(aout) }"
+            class="text-end"
+            >keyboard_arrow_down</mat-icon
+          >
+          <span>Août</span>
+        </mat-list-item>
+        <div *ngIf="isActivatedItem(aout)">
+          <app-table [mouvements]="produitsAout"></app-table>
+        </div>
+      </div>
+      <div #septembre>
+        <mat-list-item
+          role="button"
+          [ngClass]="{ listItemActivated: isActivatedItem(septembre) }"
+          (click)="onClickListItem(septembre)"
+        >
+          <mat-icon
+            matListItemIcon
+            [ngClass]="{ iconListItemActivated: !isActivatedItem(septembre) }"
+            class="text-end"
+            >keyboard_arrow_down</mat-icon
+          >
+          <span>Septembre</span>
+        </mat-list-item>
+        <div *ngIf="isActivatedItem(septembre)">
+          <app-table [mouvements]="produitsSeptembre"></app-table>
+        </div>
+      </div>
+      <div #octobre>
+        <mat-list-item
+          role="button"
+          [ngClass]="{ listItemActivated: isActivatedItem(octobre) }"
+          (click)="onClickListItem(octobre)"
+        >
+          <mat-icon
+            matListItemIcon
+            [ngClass]="{ iconListItemActivated: !isActivatedItem(mars) }"
+            class="text-end"
+            >keyboard_arrow_down</mat-icon
+          >
+          <span>Octobre</span>
+        </mat-list-item>
+        <div *ngIf="isActivatedItem(octobre)">
+          <app-table [mouvements]="produitsOctobre"></app-table>
+        </div>
+      </div>
+      <div #novembre>
+        <mat-list-item
+          role="button"
+          [ngClass]="{ listItemActivated: isActivatedItem(novembre) }"
+          (click)="onClickListItem(novembre)"
+        >
+          <mat-icon
+            matListItemIcon
+            [ngClass]="{ iconListItemActivated: !isActivatedItem(novembre) }"
+            class="text-end"
+            >keyboard_arrow_down</mat-icon
+          >
+          <span>Novembre</span>
+        </mat-list-item>
+        <div *ngIf="isActivatedItem(novembre)">
+          <app-table [mouvements]="produitsNovembre"></app-table>
+        </div>
+      </div>
+      <div #decembre>
+        <mat-list-item
+          role="button"
+          [ngClass]="{ listItemActivated: isActivatedItem(decembre) }"
+          (click)="onClickListItem(decembre)"
+        >
+          <mat-icon
+            matListItemIcon
+            [ngClass]="{ iconListItemActivated: !isActivatedItem(decembre) }"
+            class="text-end"
+            >keyboard_arrow_down</mat-icon
+          >
+          <span>Décembre</span>
+        </mat-list-item>
+        <div *ngIf="isActivatedItem(decembre)">
+          <app-table [mouvements]="produitsDecembre"></app-table>
+        </div>
+      </div>
+    </mat-list>
+  </div>
+</div>

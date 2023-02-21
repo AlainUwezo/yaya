@@ -1,0 +1,57 @@
+.org_name{
+  color: rgb(195, 117, 0);
+}
+mat-toolbar{
+  background-color: white;
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.menu-icon{
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+ul li{
+  display: inline-block;
+}
+ul li a{
+  margin: 0 5px;
+  padding: 0 5px;
+  color: #212121;
+  font-size: 14px;
+  font-weight: normal;
+}
+ul li a:hover{
+  color: black;
+  border-bottom: 2px solid orange;
+}
+
+.active{
+  border-bottom: 2px solid orange;
+  border-left: none;
+  font-weight: bold!important;
+}
+.mobilenav-container{
+  position: fixed;
+  z-index: 3;
+  height: 95vh;
+  right: 0;
+  width: 75wh;
+}
+.mobilenav-container ul{
+  background-color: white;
+  width: 50vw;
+}
+.mobilenav-container ul li{
+  padding: 10px;
+  display: block!important;
+}
+.mobilenav-container ul li a{
+  margin: 0 20px;
+  padding: 5px 10px;
+}
+.menu-icon at-drawer-container{
+  background-color: transparent;
+}

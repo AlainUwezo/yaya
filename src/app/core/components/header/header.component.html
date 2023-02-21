@@ -1,0 +1,45 @@
+<mat-toolbar class="sticky-top px-lg-5">
+  <mat-toolbar-row>
+    <img src="./assets/img/logo.jpg" class="rounded-circle" width="50px" />
+    <span class="ms-2 fs-3">Y<span class="org_name">a</span>y<span class="org_name">a</span></span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="menu-icon d-block d-lg-none" aria-label="Menu icon pour les tablettes et telephones">
+      <mat-drawer-container>
+        <div>
+          <mat-icon *ngIf="!showSideNav" (click)="showSideNav = !showSideNav" type="button" mat-button (click)="mobilenav.toggle()">menu</mat-icon>
+          <mat-icon *ngIf="showSideNav" (click)="showSideNav = !showSideNav" type="button" mat-button (click)="mobilenav.toggle()">close</mat-icon>
+        </div>
+      </mat-drawer-container>
+    </button>
+    <ul class="navbar-nav d-inline-block d-none d-lg-block">
+      <li class="nav-item">
+        <a class="nav-link" role="button" routerLink="/home" routerLinkActive="active">Accueil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" role="button" routerLink="/etat-financiers" routerLinkActive="active">Etats financiers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" role="button" routerLink="/about" routerLinkActive="active">A propos</a>
+      </li>
+    </ul>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-drawer-container class="mobilenav-container ps-absolute d-block d-lg-none">
+  <mat-drawer #mobilenav mode="side" position="end">
+    <ul class="navbar-nav d-block d-lg-none">
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="showSideNav"
+          (click)="mobilenav.toggle(); hideSideNav()" routerLink="/home" routerLinkActive="active">Accueil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="showSideNav"
+          (click)="mobilenav.toggle(); hideSideNav()" routerLink="/etat-financiers" routerLinkActive="active">Etats financiers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="showSideNav"
+          (click)="mobilenav.toggle(); hideSideNav()" routerLink="/about" routerLinkActive="active">A propos</a>
+      </li>
+    </ul>
+  </mat-drawer>
+</mat-drawer-container>

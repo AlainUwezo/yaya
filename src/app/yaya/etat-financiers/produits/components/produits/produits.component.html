@@ -1,0 +1,19 @@
+<div class="mb-5">
+  <app-topbar></app-topbar>
+  <div class="p-3 d-flex justify-content-between align-items-center">
+    <p class="h2 text-muted">TOTAL PROD.</p>
+    <p class="text-end">
+      <span class="fw-bold">fc {{totalProduits}}</span><br/><br/>
+      <span class="fw-bold">$ {{totalProdDollar | number: '1.0-2'}}</span>
+    </p>
+  </div>
+  <div class="text-center">
+    <span class="py-2 px-4 rounded-4 bg-warning">
+      <span class="text-muted fw-bold">1 USD = {{taux}} FC</span>
+    </span>
+  </div>
+  <div style="margin-top: -10px;">
+    <app-graphique></app-graphique>
+  </div>
+  <app-liste></app-liste>
+</div>

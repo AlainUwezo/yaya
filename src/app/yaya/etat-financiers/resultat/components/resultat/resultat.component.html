@@ -1,0 +1,25 @@
+<div class="mb-5">
+  <app-topbar></app-topbar>
+  <div class="px-3 py-2 container-fluid">
+    <div class="resultat-total-container p-3 rounded-4">
+      <p class="h6 text-muted">Résultat total</p>
+      <p class="h1">$ {{resultatDollar | number: '1.0-2'}}</p>
+      <br/>
+      <p class="text-end">
+        <span class="bg-light p-2 px-3 rounded-4">Taux : {{taux}} fc</span>
+      </p>
+      <p>
+        <span>~ {{resultatTotal}} Fc</span>
+      </p>
+    </div>
+    <p class="text-muted my-3">SITUATION FINANCIÈRE</p>
+    <div class="row">
+      <div class="col-5">
+        <app-corps></app-corps>
+      </div>
+      <div class="col-7">
+        <app-graphique></app-graphique>
+      </div>
+    </div>
+  </div>
+</div>

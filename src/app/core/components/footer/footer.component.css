@@ -1,0 +1,12 @@
+.footer{
+  background-color: white;
+  border-top: 1px solid rgb(240, 240, 240);
+
+}
+.org_name{
+  color: rgb(255, 0, 0);
+}
+.logo_img{
+  width: 50px;
+  border-radius: 50px;
+}

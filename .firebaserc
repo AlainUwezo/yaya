@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "yaya-lushi"
+  },
+  "targets": {
+    "yaya-lushi": {
+      "hosting": {
+        "yaya": [
+          "yaya-lushi"
+        ]
+      }
+    }
+  }
+}

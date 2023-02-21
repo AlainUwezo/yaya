@@ -1,0 +1,12 @@
+
+.iconListItemActivated{
+  display: inline;
+  rotate: 270deg;
+}
+mat-list-item{
+  border-top: 1px solid rgb(240, 240, 240);
+  border-radius: 5px;
+}
+.listItemActivated{
+  border-right: 5px solid darkorange;
+}

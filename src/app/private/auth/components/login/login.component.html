@@ -1,0 +1,49 @@
+<div class="container py-5">
+  <div class="text-center mt-5">
+    <img src="./assets/img/logo.jpg" width="100" class="rounded-circle">
+  </div>
+  <div class="row mt-5 justify-content-center">
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <form [formGroup]="formGroup">
+            <div class="mb-3">
+              <h4 class="text-dark text-muted">Identifiez-vous</h4>
+            </div>
+            <mat-form-field class="mb-3 w-100" appearance="outline">
+              <mat-label>Email</mat-label>
+              <input type="email" matInput name="email" formControlName="email">
+              <mat-error *ngIf="getEmailControl().hasError('email') && !getEmailControl().hasError('required')">
+                Veuillez entrer une adresse mail valide
+              </mat-error>
+              <mat-error *ngIf="getEmailControl().hasError('required')">
+                L'adresse mail est <strong>requis</strong>
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="mb-3 w-100">
+              <mat-label>Enter your password</mat-label>
+              <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password" maxlength="20">
+              <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+                <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-error *ngIf="getPasswordControl().hasError('minlength') && !getPasswordControl().hasError('required')">
+                3 caractère minimum
+              </mat-error>
+              <mat-error *ngIf="getPasswordControl().hasError('maxlength') && !getPasswordControl().hasError('required')">
+                20 caractère maximum
+              </mat-error>
+              <mat-error *ngIf="getPasswordControl().hasError('required')">
+                Le mot de passe est <strong>requis</strong>
+              </mat-error>
+            </mat-form-field>
+            <p class="text-end">
+              <button type="submit" class="btn btn-dark"
+                (click)="login()" [disabled]="formGroup.invalid">Se connecter</button>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
